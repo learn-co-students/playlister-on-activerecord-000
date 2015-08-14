@@ -9,6 +9,7 @@ RSpec.configure do |config|
   config.before do
     reset_database
   end
+
 end
 
 def reset_database
