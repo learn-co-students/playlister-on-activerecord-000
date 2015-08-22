@@ -9,8 +9,10 @@ describe 'Song Associations' do
 
   it 'has a genre' do
     genre = Genre.create(name: "Rock")
+
     @song.genre = genre
     @song.save
+
 
     expect(Song.find_by(name: "Forever").genre).to eq(genre)
   end
@@ -24,7 +26,7 @@ describe 'Song Associations' do
   end
 
   it 'can be created with an artist as an attribute' do
-    artist = Artist.create(name: "The Beatles")
+    artist = Artist.create(name: "The Beatles", id: 5)
     song = Song.create(name: "Yellow Submarine", artist: artist)
 
     expect(Song.where(name: "Yellow Submarine").first.artist).to eq(artist)
