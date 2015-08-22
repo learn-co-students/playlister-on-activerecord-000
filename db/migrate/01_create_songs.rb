@@ -5,7 +5,7 @@ class CreateSongs < ActiveRecord::Migration
       # t.references :genre_id
       # t.references :artist_id
       t.belongs_to :artist, index: true
-      # t.belongs_to :genre, index: true
+      t.belongs_to :genre, index: true
     end
   end
 end
